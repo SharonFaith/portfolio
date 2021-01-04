@@ -1,3 +1,11 @@
 from django.db import models
+import datetime as dt
+import cloudinary 
+from cloudinary.models import CloudinaryField
 
-# Create your models here.
+class Project(models.Model):
+    name = models.CharField(max_length=30)
+    landing_page = CloudinaryField(blank=True, null=True)
+    description = models.TextField()
+    live_site = models.URLField()
+    repo_link = models.URLField()
