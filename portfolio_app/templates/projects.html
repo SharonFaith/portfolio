@@ -11,37 +11,50 @@
 {% block content %}
 {{block.super}}
 <div class="container-fluid"> 
-    <div class="container text-center">
+    <div class="container text-center" style=" font-family: 'Fredoka One', cursive; color: black;">
         <h1>PROJECTS</h1>
         <br>
-        <p>Find below some of the projects that I have worked on: </p>
+        <p>Here are some of the projects that I have worked on: </p>
 
         <hr>
+        {% for project in projects %}
         <div class="row text-black font-weight-bold">
-            <div class="col-md-5">
-                <div class = "card" style="background-color: whitesmoke; border: whitesmoke; padding: 15px; margin: 10px;">
-                    <div class = "card-header text-center" style="background-color: whitesmoke;">
-                        <img class="img-rounded"  src="" style="max-width: 2em; margin-right: 10px;">
-                        <a href=""><strong>Project Name:</strong></a>
+           
+            <div class = "card" style="background-color: white; border: white; padding: 15px; margin: 10px;">
+                <div class="row">    
+                    <div class = "card-header text-center" style="background-color: #3d0814ff; color: gray; font-size: large; padding: 15px; margin: 10px;">
+                        <img class="img-rounded"  src="{{project.landing_page.url}}" style="max-width: 2em; margin-right: 10px;">
+                        <p>Project Name: {{project.name}}</p>
                     </div>
+                    <br>
+                    
+                    <div class="col-md-5">
                     <div class = "card-body">
-                        <a href=""><img src="" class="img-responsive" alt="Image" style="padding: 5px; width: 100%; height: 100%;"></a>
+                        <img src="{{project.landing_page.url}}" class="img-responsive" alt="Image" style="padding: 5px; width: 100%; height: 100%;">
                     </div>
-                    <div class="card-footer">
-                        <p><strong>Description: </strong></p>
-                        <a href=""><p>Link to repository</p></a>
-                        <p>Access the live site <a href="">here</a></p>
+                    </div> 
+                    <div class="col-md-2"></div>
+                    <div class="col-md-5">
+                    <div class="card-body">
+                        <p><strong>Description: </strong> {{project.description}}</p>
+                        <p><strong>Repository link: </strong> Click <a href="{{project.repo_link}}">here</a></p>
+                        <p><strong>Live site: </strong> Access the live site <a href="{{project.live_site}}">here</a></p>
                         
                         
                     </div>
-                    <hr>
+                    </div>
+           
                 </div>
-             
-            <div class="col-md-2"></div>
-          
-             
-        </div>
+               
+            
 
+           
+
+            </div>
+          
+        </div>     
+        <hr>
+        {% endfor %}
     </div>
 </div>
 

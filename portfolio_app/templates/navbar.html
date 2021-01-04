@@ -1,5 +1,10 @@
-<div class="navbar navbar-inverse" role="navigation" style="background-color: black;">
-    <div class="container-fluid">
+{% block styles %}
+           
+            <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+{% endblock %}
+            
+<div class="navbar navbar-inverse" role="navigation" style="background-color: #3d0814ff; border: none; color: black; padding: 20px; font-size: 20px;">
+    <div class="container-fluid" style=" font-family: 'Fredoka One', cursive; color: black;">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                 <span class="sr-only">Toggle navigation</span>
@@ -11,8 +16,8 @@
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li><a href="/">Home</a></li>
-                <li><a href="{% url 'projects' %}">Projects</a></li>
+                <li><a href="/" >Home</a></li>
+                <li><a href="{% url 'projects' %}" >Projects</a></li>
             </ul>
             
         </div>
