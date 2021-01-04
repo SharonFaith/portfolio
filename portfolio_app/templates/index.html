@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% load bootstrap3 %}
+
+{% block styles %}
+            {% bootstrap_css %}
+            <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+{% endblock %}
+            
+            
+            
+{% block content %}
+{{block.super}}
+<div class="container-fluid"> 
+    <div class="container text-center">
+        <div>
+            <h1>PORTFOLIO</h1>
+        </div>
+        <br>
+        <div>
+            <p>Welcome to my programming portfolio! I hope that you will find it informative. </p>
+        </div>
+        <hr>
+        <hr>
+        <div>
+            <h2>ABOUT ME</h2>
+        </div>
+        <br>
+        <div>
+            <p>My name is Sharon Faith. I am a full stack web developer currently based in Nairobi, Kenya. </p>
+            <p>I am enthusiastic about coding and creating a good user experience. I gained my programming skills at Moringa School's bootcamp as well as through personal research.</p>
+            <p>You can check out some of my projects <a href="">here</a>.</p>
+            <br>
+            <h4><strong>Technologies </strong></h4>
+            
+                <p>- HTML</p>
+                <p>- CSS & Bootstrap</p>
+                <p>- JavaScript</p>
+                <p>- TypeScript</p>
+                <p>- Python</p>
+            
+            <br>
+            <div class="text-center">
+            <p><strong>Frameworks:</strong></p>
+            
+                <p>- Angular</p>
+                <p>- Flask</p>
+                <p>- Django</p>
+           
+            </div>
+        </div>
+        <hr>
+        <hr>
+        <div>
+            <h2>CONTACT ME</h2>
+            <br>
+            <p><strong>Email: </strong>sharonsally16@gmail.com</p>
+            <p><strong>Github: </strong>SharonFaith </p>
+        </div>
+        <hr>
+    </div>
+</div>
+
+{% endblock %}
